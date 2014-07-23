@@ -1,0 +1,142 @@
+.profile_box {
+    background: #F8F8F8;
+    margin: 0;
+    display: block;
+    border-radius: 5px;
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    border: 1px solid #d6d6d6;
+    border-top: 1px solid #ebebeb;
+    box-shadow: 0px 3px 0px 0px #aaaaaa;
+    box-shadow: 0px 3px 0px 0px #CFCFCF;
+    font-size: auto;
+    //min-height: 65px;
+  }
+  .profile_text {
+    display: block;
+    float: left;
+    line-height: 26px;
+    //margin-right: 8px;
+    font-weight: bold;
+    padding-right: 8px;
+  }
+  .profile_type {
+    display: block;
+    float: left;
+    line-height: 26px;
+    margin-right: 10px;
+    //width: 68px;
+    color: #aaa;
+    
+    padding-right: 10px;
+    border-right: 1px solid #EBEBEB;
+  }
+  
+  .profile_item_select,.profile_item_noselect {
+    display: block;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #c9c9c9;
+    border-radius: 4px 0 0 4px;
+    //padding: 15px 20px 15px 15px;
+    padding: 15px 1%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #252525;
+    float: left;
+    //width: 90%;
+    line-height: 2;
+    font-size: medium;
+  }
+  .bb-dest-option .info.add-new {
+    width: 95%;
+    padding-right: 3%;
+    border-radius: 4px;
+  }
+  
+  
+  
+  
+  .profile_item_select:hover,.profile_item_noselect:hover {
+    color: #da2828;
+  }
+  .profile_item_select:active, .profile_item_select:focus,.profile_item_noselect:active, .profile_item_noselect:focus {
+    box-shadow: inset 0 0 5px #da2828;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .profile_item {
+    margin-right: 15px;
+  }
+  .profile_item:hover {
+    color: #da2828;
+    cursor: pointer;
+  }
+  
+  .profile_item_add_select {
+    border-radius: 4px 4px 4px 4px;
+    padding: 12px;
+  }
+
+  .profile_item_selected {
+    border-bottom: 3px solid #da2828;
+    margin-bottom: 10px;
+  }
+
+  .profile_choose {
+    font-size: 20px;
+    font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
+    padding: 5px 0 15px 5px;
+    color: #464646;
+  }
+  .backupbuddyFileTitle {
+    color: #0084CB;
+    font-size: 1.2em;
+  }
+  
+  .profile_settings {
+    display: block;
+    float: left;
+    height: 34px;
+    /*
+    width: 20px;
+    padding: 11px;
+    */
+    padding: 11px 1%;
+    width: 20px;
+    margin-top: 0;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    background-size: 20px 20px;
+    border-radius: 0 4px 4px 0;
+    border-right: 1px solid #e7e7e7;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #c9c9c9;
+    
+    background-position: center;
+    background-repeat:no-repeat;
+    background-color: #fff; 
+    background-size: 20px 20px;
+  }
+  .profile_settings:hover {
+    background-color: #a8a8a8;
+    background-size: 20px 20px;
+    box-shadow: inset 0 0 8px #666;
+  }
+  .profile_add {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: transparent url('<?php echo pb_backupbuddy::plugin_url(); ?>/images/dest_plus.png') top left no-repeat;
+    vertical-align: -3px;
+  }
+  .profile_add:hover {
+    background: transparent url('<?php echo pb_backupbuddy::plugin_url(); ?>/images/dest_plus.png') bottom left no-repeat;
+  }
