@@ -2,9 +2,10 @@
 /*
 Plugin Name: Client Dash - Backup Buddy
 Description: Backup buddy plugin for Client Dash
-Version: 0.1.1
+Version: 1.0.0
 Author: Brian Retterer
 Author URI: http://brianretterer.com
+License: GPLv2
 */
 
 class BackbuddyForClientDash {
@@ -23,18 +24,7 @@ class BackbuddyForClientDash {
 	// Set this to the page you want your tab to appear on (account, help and reports exist in Client Dash)
 	private $page = 'help';
 
-	/*
-	* Now let's setup our options
-	* You can change the strings to be more unique
-	* If you change the variable names, you'll need to update the
-	* references in the register_settings() and settings_display() functions
-	*/
-	// A checkbox option
-	private $cb_option = '_checkbox';
-	// A text field option
-	private $text_option = '_text';
-	// A URL/text field option
-	private $url_option = '_url';
+	
 
 	/*
 	* This constructor function sets up what happens when the plugin
@@ -44,8 +34,6 @@ class BackbuddyForClientDash {
 	public function __construct() {
 		add_action( 'admin_notices', array( $this, 'notices' ) );
 		add_action( 'plugins_loaded', array( $this, 'content_block' ) );
-		// add_action( 'admin_init', array( $this, 'register_settings' ) );
-		add_action( 'cd_settings_general_tab', array( $this, 'settings_display' ), 11 );
 		add_action( 'admin_enqueue_scripts', array( $this, 'register_styles' ) );
 	}
 
@@ -83,58 +71,6 @@ class BackbuddyForClientDash {
 		<?php
 		}
 	}
-
-	// Register settings
-	public function register_settings() {
-		register_setting( 'cd_options_backupbuddy', $this->pre.$this->cb_option );
-		register_setting( 'cd_options_general', $this->pre.$this->cb_option );
-		register_setting( 'cd_options_general', $this->pre.$this->text_option, 'esc_html' );
-		register_setting( 'cd_options_general', $this->pre.$this->url_option, 'esc_url_raw' );
-	}
-
-	// Add settings to General tab
-	public function settings_display() {
-		$checkbox_option_name = $this->pre.$this->cb_option;
-		$checkbox_option = get_option( $checkbox_option_name );
-		$text_option = $this->pre.$this->text_option;
-		$url_option = $this->pre.$this->url_option;
-		?>
-	<table class="form-table">
-		<tbody>
-			<tr valign="top">
-				<th scope="row"><h3><?php echo $this->plugin; ?> settings</th>
-			</tr>
-			<tr valign="top">
-				<th scope="row">
-					<label for="<?php echo $checkbox_option_name; ?>">Checkbox setting</label>
-				</th>
-				<td><input type="hidden" name="<?php echo $checkbox_option_name; ?>" value="0" />
-					<input type="checkbox" name="<?php echo $checkbox_option_name; ?>" id="<?php echo $checkbox_option_name; ?>" value="1" <?php checked( '1', $checkbox_option); ?> />
-				</td>
-			</tr>
-			<tr valign="top">
-				<th scope="row">
-					<label for="<?php echo $text_option; ?>">Text setting</label>
-				</th>
-				<td><input type="text" 
-					id="<?php echo $text_option; ?>" 
-					name="<?php echo $text_option; ?>" 
-					value="<?php echo get_option( $text_option ); ?>" />
-				</td>
-			</tr>
-			<tr valign="top">
-				<th scope="row">
-					<label for="<?php echo $url_option; ?>">URL setting</label>
-				</th>
-				<td><input type="text" 
-					id="<?php echo $url_option; ?>" 
-					name="<?php echo $url_option; ?>" 
-					value="<?php echo get_option( $url_option ); ?>" />
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<?php }
 
 	// Insert the tab contents
 	public function tab_contents() {
