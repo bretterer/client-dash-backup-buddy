@@ -1,6 +1,7 @@
 === Client Dash - Backup Buddy ===
 
-Contributors: Brian Retterer
+Contributors: bretterer
+Donate link: http://brianretterer.com/plugins/
 Tags: client, portal, dashboard, admin, users, webmaster
 Requires at least: 3.8.0
 Requires Client Dash: 1.4 or later
@@ -12,6 +13,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
 
 Client Dash - Backup Buddy allows users to create and download backup buddy backups from the client dash help screen.
+
+** Works with Client dash 1.4 or later only **
 
 == Installation ==
 
