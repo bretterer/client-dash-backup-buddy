@@ -4,9 +4,9 @@ Contributors: bretterer
 Donate link: http://brianretterer.com/plugins/
 Tags: client, portal, dashboard, admin, users, webmaster
 Requires at least: 3.8.0
-Requires Client Dash: 1.4 or later
+Requires Client Dash: 1.5 or later
 Tested up to: 4.0
-Stable tag: v1.0
+Stable tag: v1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,10 +28,13 @@ Using this plugin is very simple. All you have to do is:
 
 == Changelog ==
 
+= 1.1 =
+* Fixed issues with Client Dash Upgrade
+
 = 1.0 =
 * Initial release.
 * Includes Backups Tab in help menu
 
 == Upgrade Notice ==
 
-= 1.0 =
+= 1.1 =
